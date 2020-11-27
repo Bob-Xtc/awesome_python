@@ -17,9 +17,9 @@ class Vehicle:
 
 class PlaneMixin(object):
     def fly():
-		return "I can fly"
+	return "I can fly"
 
 class Airplane(Vehicle, PlaneMixin):
-	pass
+    pass
 	
 	
