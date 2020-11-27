@@ -33,7 +33,7 @@ inspect.getmro(D)
 
 
 '''
-New-style class mro(python version >= 2.2)
+New-style class mro(Python version = 2.2)
         In order to solve the problem of classical mro, Python 2.2 proposes 
     a new mro calculation method for new-style class.
         New-style class mro is similar to classical mro: It still use DFS left 
@@ -86,4 +86,20 @@ D.__mro__
      <type 'object'>,
     )
 '''
+
+
+
+
+'''
+C3 mro(Python version > 2.2):
+        To solve the problem of MRO in Python 2.2, Python 2.3 and later use the C3 algorithm to 
+    determine the method parsing sequence. If you enter the preceding code in a version later than 
+    Python 2.3, an exception is generated, prohibiting creating ambiguous inheritance relationships.
+        If this occurs in the preceding example, an error is reported:
+                >>> TypeError: Cannot create a consistent method resolution
+                ... order (MRO) for bases X, Y
+                
+        For details about C3 algorithm parsing, see: https://blog.csdn.net/u011467553/article/details/81437780
+'''
+
 
